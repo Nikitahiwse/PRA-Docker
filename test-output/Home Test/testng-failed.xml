@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Home Test]">
+  <test thread-count="5" name="Home(failed)">
+    <classes>
+      <class name="pra_package.PRA_Home">
+        <methods>
+          <include name="By_pathway_pestrisk"/>
+          <include name="By_pathway_summaryscreen"/>
+          <include name="fail_testcase"/>
+          <include name="By_pathway_report_generation"/>
+          <include name="teardown_browerclosing"/>
+          <include name="initialization_browser_opening"/>
+        </methods>
+      </class> <!-- pra_package.PRA_Home -->
+    </classes>
+  </test> <!-- Home(failed) -->
+</suite> <!-- Failed suite [Home Test] -->

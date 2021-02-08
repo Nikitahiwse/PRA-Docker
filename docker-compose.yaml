@@ -1,0 +1,27 @@
+version: "3"
+services:
+  hub:
+    image: selenium/hub
+    ports:
+      - "4444:4444"
+  chrome:
+    image: selenium/node-chrome
+    shm_size: "1gb"
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+    volumes:
+      - ./downloads:/home/seluser/Downloads
+
+
+  home:
+    image: cabi/selenium-docker
+    depends_on:
+      - chrome
+    environment:
+      - BROWSER=chrome
+      - HUB_HOST=hub
+      - MODULE=home.xml
+    volumes:
+      - ./output/result/PRA_Report:/usr/share/data/PRA_Report

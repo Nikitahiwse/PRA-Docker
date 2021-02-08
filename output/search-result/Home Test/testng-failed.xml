@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Home Test]">
+  <test thread-count="5" name="Home(failed)">
+    <classes>
+      <class name="pra_package.PRA_Home">
+        <methods>
+          <include name="By_pathway_pestrisk"/>
+          <include name="By_pathway_summaryscreen"/>
+          <include name="By_pathway_risk_assessments"/>
+          <include name="Regulated_Pest_Test"/>
+          <include name="By_pest_Probabity_of_entry"/>
+          <include name="fail_testcase"/>
+          <include name="By_pest_delete_PRA"/>
+          <include name="Previous_PRA_Test"/>
+          <include name="pathway_creation"/>
+          <include name="title_verification"/>
+          <include name="By_pest_cattegorization_tab"/>
+          <include name="By_pest_initiation"/>
+          <include name="teardown_browerclosing"/>
+          <include name="Banner_footer"/>
+          <include name="Bypest_download_PRA_report"/>
+          <include name="login_Test"/>
+          <include name="initialization_browser_opening"/>
+          <include name="Bypest_riskassessment"/>
+          <include name="Bypest_PRA_summary_screen"/>
+          <include name="By_pathway_risk_assessments_actions"/>
+          <include name="Bypest_risk_management"/>
+          <include name="By_pathway_report_generation"/>
+          <include name="gmail_verification"/>
+          <include name="PRA_Home_Test"/>
+        </methods>
+      </class> <!-- pra_package.PRA_Home -->
+    </classes>
+  </test> <!-- Home(failed) -->
+</suite> <!-- Failed suite [Home Test] -->

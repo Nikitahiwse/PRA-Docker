@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="home-module" configfailurepolicy="continue">
+    <test name="home-module">
+        <classes>
+            <class name="pra_package.PRA_Home"/>
+        </classes>
+    </test>
+</suite>
