@@ -21,7 +21,7 @@ ADD src/main/resources/credentials/credentials.json      src/main/resources/cred
 # please ADD that as well
 
 # ADD suite files
-#ADD mycabi.xml              mycabi.xml
+ADD mycabi.xml              mycabi.xml
 ADD home.xml				home.xml
 
 
