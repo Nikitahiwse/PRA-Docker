@@ -38,13 +38,13 @@ public class My_cabi_account extends PRA_Base {
 	     ac1.login_to_cpc(getobject("cpc_username"),getobject("cpc_password"));
 	     ac1.account_creation_mycabi(getobject("firstname"),getobject("lastname"),getobject("email"),getobject("password"));
 	}
-	//@Test (priority = 2)
+	@Test (priority = 2)
 	void login_with_created_account() throws IOException, InterruptedException
 	{
 		mycabi_account_creation ac2=PageFactory.initElements(wd, mycabi_account_creation.class);
 		ac2.login_to_mycabi(getobject("email"),getobject("password"));
 	}
-	//@Test(priority = 3)
+	@Test(priority = 3)
 	void mycabi_tab() throws InterruptedException
 	{
 		Mycabi_tab mycabi=PageFactory.initElements(wd, Mycabi_tab.class);

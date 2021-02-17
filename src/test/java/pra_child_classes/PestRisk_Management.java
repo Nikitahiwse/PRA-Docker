@@ -1,13 +1,11 @@
 package pra_child_classes;
 
-import java.util.Set;
-
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import com.aventstack.extentreports.Status;
-
 import pra_package.PRA_Home;
+
+import java.util.Set;
 
 public class PestRisk_Management extends PRA_Home {      //Apate monachus (black borer)
 
@@ -112,7 +110,7 @@ public class PestRisk_Management extends PRA_Home {      //Apate monachus (black
 		complete_risk_management.click();
 		Logger12.log(Status.PASS, "Click on Complete Risk Management");
 				
-		Thread.sleep(4000);
+		Thread.sleep(8000);
 		save_return_to_pestlist.click();
 		Logger12.log(Status.PASS, "Clicked on Save & Return to Pest List");
 		
@@ -233,7 +231,7 @@ public class PestRisk_Management extends PRA_Home {      //Apate monachus (black
 					return_to_pestlist.click();
 					Logger12.log(Status.PASS, "Return to pest list button got clicked successfully");
 					
-					Thread.sleep(5000);
+					Thread.sleep(4000);
 					
 				}
 	

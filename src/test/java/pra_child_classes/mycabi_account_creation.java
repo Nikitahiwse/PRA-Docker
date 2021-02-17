@@ -1,16 +1,14 @@
 package pra_child_classes;
 
-import java.util.List;
-
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import com.aventstack.extentreports.Status;
-
 import pra_package.My_cabi_account;
+
+import java.util.List;
 
 public class mycabi_account_creation extends My_cabi_account{
 	@FindBy(xpath="//li//a[text()='Sign in']")WebElement signin;
@@ -36,7 +34,7 @@ public class mycabi_account_creation extends My_cabi_account{
 		/*
 		 * if(name.equals("Manage Access")) { login_via_username_password.click(); }
 		 */
-	    Thread.sleep(2000);
+	    Thread.sleep(4000);
 		username.sendKeys(cpc_username);
 		Thread.sleep(1000);
 		logger1.log(Status.PASS, "CPC username got entered successfully");
@@ -149,8 +147,10 @@ public class mycabi_account_creation extends My_cabi_account{
 		Thread.sleep(2000);
 		checkbox1.click();
 		Thread.sleep(1000);
+		logger3.log(Status.PASS, "checkbox 1 got clicked");
 		checkbox2.click();
 		Thread.sleep(1000);
+		logger3.log(Status.PASS, "checkbox 2 got clicked");
 		save_button.click();
 		Thread.sleep(3000);
 		

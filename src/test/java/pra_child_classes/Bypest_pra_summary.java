@@ -29,9 +29,9 @@ public class Bypest_pra_summary extends PRA_Home{
 	
 	public void pra_summary() throws InterruptedException
 	{
-		Thread.sleep(4000);
-		PRA_summary_tab.click();
-		Thread.sleep(2000);
+		//Thread.sleep(3000);
+		//PRA_summary_tab.click();
+		//Thread.sleep(2000);
 		logger22.log(Status.PASS, tab_header.getText()+" is opened");
 		
 		jse.executeScript("window.scrollBy(0,500)", "");

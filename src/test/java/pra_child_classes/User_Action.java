@@ -140,7 +140,7 @@ public class User_Action extends PRA_Home {
 
 	public void perform_action() throws Throwable 
 	{
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		Risk_Assessment_Filter.click();
 		Logger11.log(Status.PASS, "Risk Assessment Tab Filter Clicked Successfilly");
 		

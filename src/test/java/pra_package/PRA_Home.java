@@ -35,7 +35,7 @@ public class PRA_Home extends PRA_Base{
 		Testcases_for_Home_report testcase=new Testcases_for_Home_report();
 		testcase.testcase_creation();
 	}
-	//@Test(priority=1)
+	@Test(priority=1)
 	void title_verification() throws InterruptedException
 	{
 		//Title_verification title=new Title_verification();
@@ -79,7 +79,7 @@ public class PRA_Home extends PRA_Base{
 		System.out.println("title exist or not: " + exist);
 	}
 
-	//@Test(priority = 5)
+	@Test(priority = 5)
 	void Banner_footer() throws InterruptedException
 	{
 		Banner_footer_PRA bf=PageFactory.initElements(wd, Banner_footer_PRA.class);
@@ -87,7 +87,7 @@ public class PRA_Home extends PRA_Base{
 		bf.footer();
 
 	}
-	//@Test(priority = 6)
+	@Test(priority = 6)
 	void PRA_Home_Test() throws InterruptedException
 	{
 		PRA_Home_tab hometab=PageFactory.initElements(wd, PRA_Home_tab.class);
@@ -96,7 +96,7 @@ public class PRA_Home extends PRA_Base{
 		hometab.View_Report();
 	}
 
-	//@Test(priority = 7)
+	@Test(priority = 7)
 	void Previous_PRA_Test() throws InterruptedException
 	{
 		Previous_PRA previous=PageFactory.initElements(wd, Previous_PRA.class);
@@ -107,7 +107,7 @@ public class PRA_Home extends PRA_Base{
 
 	}
 
-	//@Test(priority = 8)
+	@Test(priority = 8)
 	void Regulated_Pest_Test() throws InterruptedException
 	{
 		Regulated_Pest_list regulated=PageFactory.initElements(wd, Regulated_Pest_list.class);
@@ -118,7 +118,7 @@ public class PRA_Home extends PRA_Base{
 		regulated.regulated_filter();
 	}
 
-	//@Test(priority = 9)
+	@Test(priority = 9)
 	void pathway_creation() throws Throwable
 	{
 		ByPathway pathway = PageFactory.initElements(wd, ByPathway.class);
@@ -128,7 +128,7 @@ public class PRA_Home extends PRA_Base{
 		pathway.generate_full_list();
 	}
 
-	//@Test(priority = 10)
+	@Test(priority = 10)
 	void By_pathway_risk_assessments() throws Throwable
 	{
 		Pathway_RiskAssessments path = PageFactory.initElements(wd, Pathway_RiskAssessments.class);
@@ -136,7 +136,7 @@ public class PRA_Home extends PRA_Base{
 		path.full_risk_assessment();
 	}
 
-	//@Test(priority = 11)
+	@Test(priority = 11)
 	void By_pathway_risk_assessments_actions() throws Throwable
 	{
 		User_Action action= PageFactory.initElements(wd, User_Action.class);
@@ -144,7 +144,7 @@ public class PRA_Home extends PRA_Base{
 		action.export_import_pest();
 	}
 
-	//@Test(priority = 12)
+	@Test(priority = 12)
 	void By_pathway_pestrisk() throws Throwable
 	{
 		PestRisk_Management pest= PageFactory.initElements(wd, PestRisk_Management.class);
@@ -159,7 +159,7 @@ public class PRA_Home extends PRA_Base{
 		screen.summary_content();
 	}
 
-	//@Test(priority = 14)
+	@Test(priority = 14)
 	void By_pathway_report_generation() throws Throwable
 	{
 		Generate_Report report=PageFactory.initElements(wd, Generate_Report.class);
@@ -173,7 +173,7 @@ public class PRA_Home extends PRA_Base{
 	void By_pest_initiation() throws InterruptedException, IOException
 	{
 		ByPest_initiation bypest=PageFactory.initElements(wd, ByPest_initiation.class);
-		bypest.By_pest_initiation_pra(getobject("pestname"),getobject("country_area_at_risk"),getobject("suggested_title_for_pra"),getobject("pra_start_month"),getobject("pra_start_date"),getobject("pra_due_month"),getobject("pra_due_date"),getobject("pra_area"));
+		bypest.By_pest_initiation_pra(getobject("pestname"),getobject("country_area_at_risk"),getobject("suggested_title_for_pra"),getobject("pra_start_month"),getobject("pra_due_month"),getobject("pra_due_date"),getobject("pra_area"));
 		bypest.re_edit_initiation_form(getobject("suggested_title_for_pra"));
 	}
 

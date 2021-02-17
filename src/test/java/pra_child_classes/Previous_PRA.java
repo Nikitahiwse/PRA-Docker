@@ -1,17 +1,14 @@
 package pra_child_classes;
 
-import java.util.List;
-
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.Select;
-
-import com.aventstack.extentreports.Status;
-
-
 import pra_package.PRA_Home;
+
+import java.util.List;
 
 public class Previous_PRA extends PRA_Home
 {
@@ -57,7 +54,7 @@ public class Previous_PRA extends PRA_Home
 	@FindBy(linkText = "1. Pest lists and risk assessments")WebElement risk_assessment;
 	@FindBy(linkText = "2. Pest risk management")WebElement risk_management;
 	@FindBy(linkText = "3. Pest risk analysis summary")WebElement analysis_summary;
-	@FindBy(xpath="//input[@value='Change PRA status to complete']")WebElement PRA_status_complete;
+	@FindBy(xpath="//*[@id='initiation-form']/div[@class='col-sm-12']/div/input")WebElement PRA_status_complete;
 	@FindBy(xpath="//div[@id='divsuccess']//li")WebElement success_message;
 	@FindBy(xpath="//a[text()='Home']")WebElement home;
 	
@@ -86,21 +83,26 @@ public class Previous_PRA extends PRA_Home
         String risk_management_text=risk_management.getText();
         Thread.sleep(2000);
         logger7.log(Status.PASS, risk_management_text+" tab is opened");
-        //jse.executeScript("window.scrollBy(0,300)", "");
-        //jse.executeScript("window.scrollBy(0,-300)", "");
-		Thread.sleep(1000);
-        analysis_summary.click();
-        Thread.sleep(2000);
+        jse.executeScript("window.scrollBy(0,300)", "");
+        jse.executeScript("window.scrollBy(0,-300)", "");
+		Thread.sleep(5000);
+        //analysis_summary.click();
+		WebElement element = analysis_summary;
+		Actions actions = new Actions(wd);
+		actions.moveToElement(element).click().perform();
+        Thread.sleep(5000);
         String analysis_summary_text=analysis_summary.getText();
         logger7.log(Status.PASS, analysis_summary_text+" tab is opened");
-        jse.executeScript("window.scrollBy(0,900)", "");
-       PRA_status_complete.click();
-       logger7.log(Status.PASS, "Change PRA status to complete-button got clicked");
-       Thread.sleep(2000);
-       String save_message=success_message.getText();
-       logger7.log(Status.PASS, save_message);
-       Thread.sleep(3000);
-     
+        //jse.executeScript("window.scrollBy(0,900)", "");
+        Thread.sleep(4000);
+        //PRA_status_complete.click();
+       //logger7.log(Status.PASS, "Change PRA status to complete-button got clicked");
+       //String save_message=success_message.getText();
+       //logger7.log(Status.PASS, save_message);
+       //Thread.sleep(3000);
+
+     Team.click();
+     Thread.sleep(2000);
     
 		
 	}

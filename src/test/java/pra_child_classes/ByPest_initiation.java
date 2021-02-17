@@ -37,7 +37,7 @@ public class ByPest_initiation extends PRA_Home{
 	@FindBy(xpath="//span[@id='CountryAtRisk-error']")WebElement countryatrisk_error;
 	@FindBy(xpath="//span[@id='Title-error']")WebElement title_error;
 	
-	public void By_pest_initiation_pra(String Pestname, String Country_area_at_risk, String Suggested_title_for_pra, String Pra_start_month, String Pra_start_date, String Pra_due_month, String Pra_due_date, String Pra_area) throws InterruptedException
+	public void By_pest_initiation_pra(String Pestname, String Country_area_at_risk, String Suggested_title_for_pra, String Pra_start_month, String Pra_due_month, String Pra_due_date, String Pra_area) throws InterruptedException
 	{
 		//Check mandatory fields are mandatory
 		jse.executeScript("window.scrollBy(0,400)", "");
@@ -119,11 +119,12 @@ public class ByPest_initiation extends PRA_Home{
 			  { 
 			  cal.click(); 
 			  Thread.sleep(2000);
-		      WebElement date1=wd.findElement(By.xpath("//td[@class='today day' and text()='"+Pra_start_date+"']"));
+		      WebElement date1=wd.findElement(By.xpath("//td[@class='today day']"));
+		      String Pra_start_d=date1.getText();
 			  calender_bypest_prev(Pra_start_month,date1);
 		
 			  Thread.sleep(1000);
-			  logger17.log(Status.PASS, "start date selected-"+Pra_start_date+" "+Pra_start_month);
+			  logger17.log(Status.PASS, "start date selected-"+Pra_start_d+" "+Pra_start_month);
 		      } 
 			  else if(i==2) 
 			  { 

@@ -326,7 +326,7 @@ public class Bypest_Probability_of_entry extends PRA_Home{
 		Thread.sleep(5000);
 		logger19.log(Status.PASS, "File is exported successfully");
 		
-		import_file.click();
+		/*import_file.click();
 		Thread.sleep(2000);
 		
 		upload.click();
@@ -364,7 +364,7 @@ public class Bypest_Probability_of_entry extends PRA_Home{
 		Thread.sleep(2000);
 		wd.findElement(By.xpath("//div[@id='modalimportassessment']//div[@class='modal-header']//button[@class='close pull-right']")).click();
 
-		
+		*/
 		
 	}
 	@FindBy(xpath="//input[@class='btn btn-pra-red' and @value='Next']")WebElement next;

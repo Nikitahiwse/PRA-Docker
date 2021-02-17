@@ -3,7 +3,7 @@
 <suite name="MyCABI Test">
   <test name="MYCABI account creation">
   <classes>
-			<class name="pra_package." />
+			<class name="pra_package.My_cabi_account" />
 		</classes>
   </test>
 </suite> 

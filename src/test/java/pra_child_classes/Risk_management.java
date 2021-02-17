@@ -1,15 +1,13 @@
 package pra_child_classes;
 
-import java.util.List;
-
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import com.aventstack.extentreports.Status;
-
 import pra_package.PRA_Home;
+
+import java.util.List;
 
 public class Risk_management extends PRA_Home{
 	JavascriptExecutor jse=(JavascriptExecutor)wd;
@@ -23,7 +21,7 @@ public class Risk_management extends PRA_Home{
 	@FindBy(xpath="//input[@class='btn btn-pra-red' and @value='Next']")WebElement next_btn;
 	@FindBy(xpath="//h1[@class='tab-header']")WebElement tab_header;
 	@FindBy(xpath="//td[@class='bold' and text()='Inspection or testing in post-entry quarantine']")WebElement verify_summary_tab;
-	@FindBy(linkText = "3. Risk management")WebElement rist_assessment;
+	@FindBy(linkText = "3. Risk management")WebElement risk_management;
 
 	public void risk_management_form() throws InterruptedException
 	{
@@ -79,12 +77,14 @@ public class Risk_management extends PRA_Home{
         String text_s=wd.findElement(By.xpath("//p[text()='xyz']")).getText();
         logger21.log(Status.PASS, "In PRA summary tab-> In management option -"+ verify_summary_tab.getText()+" with text "+ text_s+" is visible");
         wd.switchTo().frame(1);
+        Thread.sleep(1000);
         String summary_txt=wd.findElement(By.xpath("//body[@data-id='RiskManagementNotes']//p")).getText();
         logger21.log(Status.PASS, "In PRA summary tab->"+summary_txt+" text is visible in risk management summary notes");
         wd.switchTo().defaultContent();
         Thread.sleep(2000);
-        rist_assessment.click();
-        Thread.sleep(3000);
+        //risk_management.click();
+        //Thread.sleep(3000);
+        //logger21.log(Status.PASS,"risk management tab got clicked");
         
 	}
 }

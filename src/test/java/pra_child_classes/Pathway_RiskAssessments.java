@@ -254,7 +254,7 @@ public class Pathway_RiskAssessments extends PRA_Home{
 		Full_Assessment.click();
 		Logger10.log(Status.PASS, " Full Assessment Button Clicked Successfully ");
 		
-		Thread.sleep(5000);
+		Thread.sleep(8000);
 		probability_of_pest_1.click();
 		Select r= new Select(rating_1);
 		r.selectByValue("3");

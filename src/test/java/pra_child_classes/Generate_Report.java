@@ -1,15 +1,13 @@
 package pra_child_classes;
 
-import java.util.Set;
-
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import com.aventstack.extentreports.Status;
-
 import pra_package.PRA_Home;
+
+import java.util.Set;
 
 public class Generate_Report extends PRA_Home {
 	
@@ -67,8 +65,8 @@ public class Generate_Report extends PRA_Home {
 
 	public void generate_pra_report() throws Throwable {
 		
-		analysis_summary_tab.click();
-		Logger14.log(Status.PASS, "Pest Risk Analysis summary tab clicked successfully");
+		//analysis_summary_tab.click();
+		//Logger14.log(Status.PASS, "Pest Risk Analysis summary tab clicked successfully");
 		
 		Thread.sleep(5000);
 		PRA_Report.click();

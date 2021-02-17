@@ -15,13 +15,15 @@ ADD src/test/resources/ByPathway_Generation.properties   ByPathway_Generation.pr
 ADD src/test/resources/config.properties    config.properties
 ADD src/test/resources/mycabi.properties    mycabi.properties
 ADD src/test/resources/Import_files/fileabc.docx        Import_files/fileabc.docx
-ADD Screenshot_for_failed_testcase          Screenshot_for_failed_testcase
+ADD src/main/resources/credentials/credentials.json      src/main/resources/credentials/credentials.json
 
 # in case of any other dependency like .csv / .json / .xls
 # please ADD that as well
 
 # ADD suite files
+#ADD mycabi.xml              mycabi.xml
 ADD home.xml				home.xml
+
 
 # ADD health check script
 ADD healthcheck.sh                      healthcheck.sh
