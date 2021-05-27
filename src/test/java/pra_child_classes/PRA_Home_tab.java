@@ -28,9 +28,11 @@ public class PRA_Home_tab extends PRA_Home {
 		int totalrow=tablerow.size();
 		System.out.println("Total PRA present "+ totalrow);
 		logger6.log(Status.PASS, "Total PRA present "+totalrow);
-		for(int i=1;i<=totalrow;i++) {
+		logger6.log(Status.PASS,"Checking attributes only for first 3 row");
+		for(int i=1;i<=3;i++) {
 		List<WebElement>row=wd.findElements(By.xpath("//div[@id='RecentPRADatagrid']//tbody//tr["+i+"]//td"));
 		Thread.sleep(2000);
+
 		logger6.log(Status.PASS, "Row"+i);
 		for(WebElement attribute : row)
 		{
@@ -111,35 +113,25 @@ public class PRA_Home_tab extends PRA_Home {
 		Thread.sleep(2000);
 		List<WebElement>tablerow=wd.findElements(By.xpath("//div[@id='RecentPRADatagrid']//tbody//tr"));
 		int totalrow=tablerow.size();
-		int j=1;
-		for(int i=1;i<=totalrow;i++)
+		System.out.println("Total row present "+totalrow);
+		logger6.log(Status.PASS,"Total row present "+ totalrow);
+		for(int i=1;i<=3;i++)
 		{
 		List<WebElement>Reports=wd.findElements(By.xpath("//div[@id='RecentPRADatagrid']//tr["+i+"]//a[text()='Report']"));
 		for(WebElement report:Reports)
 		{
-			
-			WebElement PRA_type=wd.findElement(By.xpath("//div[@id='RecentPRADatagrid']//tr["+j+"]//td[2]"));
-			String PRAtype=PRA_type.getText();
+
 			report.click();
 			Thread.sleep(3000);
-			logger6.log(Status.PASS," Report got clicked");
-			if(PRAtype.equalsIgnoreCase("Pathway"))
-			{
-			PRA_report=wd.findElement(By.xpath("//div[@class='report-title']//strong"));
-			
-			}
-			else 
-			{
-			PRA_report=wd.findElement(By.xpath("//div[@class='report-by-pest-title']//span"));
-		
-			}
-			String Session_titile=PRA_report.getText();
+			logger6.log(Status.PASS, "Report is opened");
+
 			jse.executeScript("window.scrollBy(0,300)", "");
 			jse.executeScript("window.scrollBy(0,300)", "");
-			logger6.log(Status.PASS, Session_titile+" report is opened");
+
 			wd.navigate().back();
 			Thread.sleep(3000);
-			j++;
+
+
 		}
 		}
 		

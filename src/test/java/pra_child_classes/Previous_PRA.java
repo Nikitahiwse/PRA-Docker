@@ -29,7 +29,7 @@ public class Previous_PRA extends PRA_Home
 		int totalrow=tablerow.size();
 		System.out.println("Total PRA present "+ totalrow);
 		logger7.log(Status.PASS, "Total PRA present "+totalrow);
-		for(int i=1;i<=totalrow;i++) {
+		for(int i=1;i<=3;i++) {
 		List<WebElement>row=wd.findElements(By.xpath("//div[@id='PRADatagrid']//tbody//tr["+i+"]//td"));
 		Thread.sleep(2000);
 		logger7.log(Status.PASS, "Row"+i);
@@ -118,7 +118,7 @@ public class Previous_PRA extends PRA_Home
 		List<WebElement>tablerow=wd.findElements(By.xpath("//div[@id='PRADatagrid']//tbody//tr"));
 		int totalrow=tablerow.size();
 		int j=1;
-		for(int i=1;i<=totalrow;i++)
+		for(int i=1;i<=3;i++)
 		{
 			
 		List<WebElement>Reports=wd.findElements(By.xpath("//div[@id='PRADatagrid']//tr["+i+"]//a[text()='Report']"));
@@ -126,12 +126,12 @@ public class Previous_PRA extends PRA_Home
 		{
 			
 			
-			WebElement PRA_type=wd.findElement(By.xpath("//div[@id='PRADatagrid']//tr["+j+"]//td[2]"));
-			String PRAtype=PRA_type.getText();
+			//WebElement PRA_type=wd.findElement(By.xpath("//div[@id='PRADatagrid']//tr["+j+"]//td[2]"));
+			//String PRAtype=PRA_type.getText();
 			report.click();
 			Thread.sleep(3000);
 			logger7.log(Status.PASS," Report got clicked");
-			if(PRAtype.equalsIgnoreCase("Pathway"))
+			/*if(PRAtype.equalsIgnoreCase("Pathway"))
 			{
 			PRA_report=wd.findElement(By.xpath("//div[@class='report-title']//strong"));
 			
@@ -140,15 +140,15 @@ public class Previous_PRA extends PRA_Home
 			{
 			PRA_report=wd.findElement(By.xpath("//div[@class='report-by-pest-title']//span"));
 		
-			}
-			String Session_titile=PRA_report.getText();
+			}*/
+			/*String Session_titile=PRA_report.getText();
 			jse.executeScript("window.scrollBy(0,300)", "");
 			jse.executeScript("window.scrollBy(0,300)", "");
-			logger7.log(Status.PASS, Session_titile+" report is opened");
+			logger7.log(Status.PASS, Session_titile+" report is opened");*/
 			wd.navigate().back();
 			
 			Thread.sleep(3000);
-			jse.executeScript("window.scrollBy(0,600)", "");
+			//jse.executeScript("window.scrollBy(0,600)", "");
 			previous_PRA.click();
 			Thread.sleep(2000);
 			j++;

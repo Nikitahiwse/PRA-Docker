@@ -38,7 +38,7 @@ public class PRA_Home extends PRA_Base{
 	@Test(priority=1)
 	void title_verification() throws InterruptedException
 	{
-		//Title_verification title=new Title_verification();
+
 		Title_verification.website_title_verification("Pest Risk Analysis Tool");
 	}
 
@@ -153,6 +153,7 @@ public class PRA_Home extends PRA_Base{
 	}
 
 	//@Test(priority = 13)
+	//skiped permanently
 	void By_pathway_summaryscreen() throws Throwable
 	{
 		Summary_Screen screen= PageFactory.initElements(wd, Summary_Screen.class);
@@ -164,8 +165,9 @@ public class PRA_Home extends PRA_Base{
 	{
 		Generate_Report report=PageFactory.initElements(wd, Generate_Report.class);
 		report.generate_pra_report();
-		report.Delete_PRA("AutomationList");
-		report.Delete_PRA("AutomationGroup");
+		report.open_team();
+		//report.Delete_PRA("AutomationList");
+		//report.Delete_PRA("AutomationGroup");
 
 	}
 
@@ -246,9 +248,9 @@ public class PRA_Home extends PRA_Base{
 	    	logger23.log(Status.PASS, "Downloaded File is not empty");
 	    }*/
 	}
-
-	@Test(priority = 22)
-	void  By_pest_delete_PRA() throws InterruptedException, IOException
+    //Skipped permanently because now delete functionality is not available
+	//@Test(priority = 22)
+	void By_pest_delete_PRA() throws InterruptedException, IOException
 	{
 		Delete_bypest_pra deletePRA=PageFactory.initElements(wd, Delete_bypest_pra.class);
 		deletePRA.delete_PRA(getobject("suggested_title_for_pra"));

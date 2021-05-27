@@ -158,7 +158,10 @@ public class Generate_Report extends PRA_Home {
 							
 	}
 				 
-							
+		public void open_team() throws InterruptedException {
+			team.click();
+			Thread.sleep(3000);
+		}
 				
 
 	public void Delete_PRA(String PRA) throws Throwable {

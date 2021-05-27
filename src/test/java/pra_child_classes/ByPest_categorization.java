@@ -210,12 +210,12 @@ public class ByPest_categorization extends PRA_Home {
   public void import_from_cpc_categorization() throws InterruptedException
    {
 	List<WebElement>import_buttons=wd.findElements(By.xpath("//div[@class='col-sm-12']//a[text()='Import from CPC']"));
-	int p=1;
+	//int p=1;
 	for(WebElement import_b : import_buttons)
 	{
 		import_b.click();
 		Thread.sleep(12000);
-		if(p==1)
+		/*if(p==1)
 		{
 			logger18.log(Status.PASS, "---------Import from cpc button got clicked of Identity------------");
 			logger18.log(Status.PASS, "Identity text is imported");
@@ -243,7 +243,7 @@ public class ByPest_categorization extends PRA_Home {
 			}
 			wd.switchTo().defaultContent();
 		}
-		p++;
+		p++;*/
 		
 	}
    }

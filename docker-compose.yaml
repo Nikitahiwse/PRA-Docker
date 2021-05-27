@@ -32,7 +32,6 @@ services:
     depends_on:
       - chrome
     environment:
-      - BROWSER=chrome
       - HUB_HOST=hub
       - MODULE=mycabi.xml
     volumes:

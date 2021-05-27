@@ -146,7 +146,7 @@ public class Risk_assessment extends PRA_Home{
 		{
 			cpc_button.click();
 			Thread.sleep(4000);
-			if(p==1)
+		/*	if(p==1)
 			{
 			wd.switchTo().frame(0);
 			logger20.log(Status.PASS, "----------Import from CPC button got clicked of question 1--------");
@@ -155,19 +155,19 @@ public class Risk_assessment extends PRA_Home{
 			String para3_text=wd.findElement(By.xpath("//body[@data-id='Questions_0__Notes']//p[3]")).getText();
 			logger20.log(Status.PASS, "Text imported in Third paragraph is -"+ para3_text);
 			wd.switchTo().defaultContent();
-			}
-			else if(p==2)
+			}*/
+			if(p==2)
 			{
 				logger20.log(Status.PASS, "-----------Import from CPC button got clicked of question 3---------");
-				String model_alert_text=wd.findElement(By.xpath("//div[@id='modalAlertDialog']//div[@class='modal-body']//p")).getText();
-				logger20.log(Status.PASS,"Alert for question 2 -"+model_alert_text );
+				//String model_alert_text=wd.findElement(By.xpath("//div[@id='modalAlertDialog']//div[@class='modal-body']//p")).getText();
+				//logger20.log(Status.PASS,"Alert for question 2 -"+model_alert_text );
 				wd.findElement(By.xpath("//button[text()='Close']")).click();
 			}
 			else if(p==3)
 			{
 				logger20.log(Status.PASS, "-----------Import from CPC button got clicked of question 7---------");
-				String model_alert_text=wd.findElement(By.xpath("//div[@id='modalAlertDialog']//div[@class='modal-body']//p")).getText();
-				logger20.log(Status.PASS,"Alert for question 2 -"+model_alert_text );
+				//String model_alert_text=wd.findElement(By.xpath("//div[@id='modalAlertDialog']//div[@class='modal-body']//p")).getText();
+				//logger20.log(Status.PASS,"Alert for question 2 -"+model_alert_text );
 				wd.findElement(By.xpath("//button[text()='Close']")).click();
 			}
 			

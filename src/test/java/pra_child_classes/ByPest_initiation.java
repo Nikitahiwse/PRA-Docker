@@ -110,8 +110,8 @@ public class ByPest_initiation extends PRA_Home{
 		titel_PRA.sendKeys(Suggested_title_for_pra);
 		logger17.log(Status.PASS, "Suggested title for PRa is- pratylenchus india");
 		Thread.sleep(1000);
-		
-		  List<WebElement>calender=wd.findElements(By.xpath("//span[@class=\"glyphicon glyphicon-calendar\"]"));
+		// calender part i am skipping because this field is not mandatory
+		 /* List<WebElement>calender=wd.findElements(By.xpath("//span[@class=\"glyphicon glyphicon-calendar\"]"));
 		  int i=1;
 		  for(WebElement cal : calender) 
 		  { 
@@ -138,7 +138,7 @@ public class ByPest_initiation extends PRA_Home{
 		      } 
 			  i++;
 	     }
-		 
+		 */
 		
 		pra_area.sendKeys(Pra_area);
 		Thread.sleep(2000);

@@ -25,8 +25,8 @@ public class Login extends PRA_Home{
 		Thread.sleep(5000);
 		logger1.log(Status.PASS, "Signin button got clicked successfully");
 	
-		wd.switchTo().frame(0);
-		Thread.sleep(2000);
+		//wd.switchTo().frame(0);
+		//Thread.sleep(2000);
 		//String name=window_name.getText();
 	    //System.out.println(name);
 	    

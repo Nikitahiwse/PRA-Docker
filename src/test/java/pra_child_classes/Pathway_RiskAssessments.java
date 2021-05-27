@@ -16,17 +16,17 @@ public class Pathway_RiskAssessments extends PRA_Home{
 	
 	@FindBy(xpath = "//input[@value='Rapid assessment']")
 	WebElement rapid_assessment;
-	
-	@FindBy(name="RapidAssessmentSections.RapidAssessmentQuestions[0].PotentialEstablishmentSpread")
+
+	@FindBy(xpath="//select[@name='RapidAssessmentSections.RapidAssessmentQuestions[0].PotentialEstablishmentSpread']")
 	WebElement potential_for_establishment_option;
-	
-	@FindBy(id="RapidAssessmentSections_RapidAssessmentQuestions_0__PotentialEstablishmentSpread")
+
+	@FindBy(xpath="//select[@id='RapidAssessmentSections_RapidAssessmentQuestions_0__PotentialEstablishmentSpread']")
 	WebElement option_1;
-	
-	@FindBy(name="RapidAssessmentSections.RapidAssessmentQuestions[1].PotentialEconomicEtcConsequences")
+
+	@FindBy(xpath="//select[@name='RapidAssessmentSections.RapidAssessmentQuestions[1].PotentialEconomicEtcConsequences']")
 	WebElement potential_for_economic_option;
-	
-	@FindBy(id="RapidAssessmentSections_RapidAssessmentQuestions_1__PotentialEconomicEtcConsequences")
+
+	@FindBy(xpath="//select[@id='RapidAssessmentSections_RapidAssessmentQuestions_1__PotentialEconomicEtcConsequences']")
 	WebElement option_2;
 	
 	@FindBy(xpath="(//button[@class='btn btn-pra-red'])[2]")
