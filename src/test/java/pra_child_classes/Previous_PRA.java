@@ -115,43 +115,26 @@ public class Previous_PRA extends PRA_Home
 		previous_PRA.click();
 		jse.executeScript("window.scrollBy(0,600)", "");
 		Thread.sleep(2000);
-		List<WebElement>tablerow=wd.findElements(By.xpath("//div[@id='PRADatagrid']//tbody//tr"));
-		int totalrow=tablerow.size();
-		int j=1;
-		for(int i=1;i<=3;i++)
+		//List<WebElement>tablerow=wd.findElements(By.xpath("//div[@id='PRADatagrid']//tbody//tr"));
+		//int totalrow=tablerow.size();
+
+		for(int i=1;i<=1;i++)
 		{
 			
 		List<WebElement>Reports=wd.findElements(By.xpath("//div[@id='PRADatagrid']//tr["+i+"]//a[text()='Report']"));
 		for(WebElement report:Reports)
 		{
-			
-			
-			//WebElement PRA_type=wd.findElement(By.xpath("//div[@id='PRADatagrid']//tr["+j+"]//td[2]"));
-			//String PRAtype=PRA_type.getText();
 			report.click();
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 			logger7.log(Status.PASS," Report got clicked");
-			/*if(PRAtype.equalsIgnoreCase("Pathway"))
-			{
-			PRA_report=wd.findElement(By.xpath("//div[@class='report-title']//strong"));
-			
-			}
-			else 
-			{
-			PRA_report=wd.findElement(By.xpath("//div[@class='report-by-pest-title']//span"));
-		
-			}*/
-			/*String Session_titile=PRA_report.getText();
-			jse.executeScript("window.scrollBy(0,300)", "");
-			jse.executeScript("window.scrollBy(0,300)", "");
-			logger7.log(Status.PASS, Session_titile+" report is opened");*/
+
 			wd.navigate().back();
-			
-			Thread.sleep(3000);
-			//jse.executeScript("window.scrollBy(0,600)", "");
+			logger7.log(Status.PASS," back button got clicked");
+			Thread.sleep(4000);
+			jse.executeScript("window.scrollBy(0,600)", "");
 			previous_PRA.click();
-			Thread.sleep(2000);
-			j++;
+			Thread.sleep(4000);
+
 		}
 		
 	}

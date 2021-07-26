@@ -162,15 +162,9 @@ public class ByPathway extends PRA_Home {
 		Logger9.log(Status.PASS, "Pest List Generated successfully");
 		
 		Thread.sleep(5000);
-		
-		
-		
-	
-		
-		
 
 }
-	
+
 	public void group_of_pest() throws Throwable
 	{
 		group_button.click();
