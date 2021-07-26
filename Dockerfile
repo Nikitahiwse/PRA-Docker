@@ -1,4 +1,21 @@
-FROM openjdk:8u191-jre-alpine3.8
+
+FROM    maven:3.8.1-openjdk-8 AS build
+
+RUN     mkdir /docker
+
+WORKDIR /docker
+
+COPY    pom.xml .
+COPY    *.iml .
+RUN     mvn dependency:resolve
+
+COPY    home.xml .
+COPY    mycabi.xml .
+COPY    src/ src/
+
+RUN     mvn clean package -DskipTests
+
+FROM openjdk:8u212-jre-alpine3.9 AS final
 
 RUN apk add curl jq
 
@@ -7,6 +24,10 @@ WORKDIR /usr/share/data
 
 # ADD .jar under target from host
 # into this image
+#COPY --from=build /docker/target/selenium-docker.jar selenium-docker.jar
+#COPY --from=build /docker/target/selenium-docker-tests.jar selenium-docker-tests.jar
+#COPY --from=build /docker/target/libs libs
+
 ADD target/selenium-docker.jar 			selenium-docker.jar
 ADD target/selenium-docker-tests.jar 	selenium-docker-tests.jar
 ADD target/libs							libs
