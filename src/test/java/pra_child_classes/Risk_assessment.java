@@ -1,17 +1,14 @@
 package pra_child_classes;
 
-import java.util.List;
-
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-
-import com.aventstack.extentreports.Status;
-
-
 import pra_package.PRA_Home;
+
+import java.util.List;
 
 public class Risk_assessment extends PRA_Home{
 
@@ -37,22 +34,22 @@ public class Risk_assessment extends PRA_Home{
 		logger20.log(Status.PASS, "------------------"+tab_under_risk_assessment+" tab Test--------------------------");
 		String sub_header_text=sub_header.getText();
 		logger20.log(Status.PASS, sub_header_text+" tab is opened");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		wd.switchTo().frame(0);
 		text_enter(text1,0);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		wd.switchTo().frame(1);
 		text_enter(text2,1);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		wd.switchTo().frame(2);
 		text_enter(text3,2);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		wd.switchTo().frame(3);
 		text_enter(text4,3);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		wd.switchTo().frame(4);
 		text_enter(text5,4);
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		wd.switchTo().frame(5);
 		text_enter(text6,5);
 		if(tab_under_risk_assessment.equalsIgnoreCase("Probability of establishment"))

@@ -67,7 +67,7 @@ public class Risk_management extends PRA_Home{
         
         Thread.sleep(1000);
         save_btn.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
         logger21.log(Status.PASS, "save button got clicked");
         next_btn.click();
         Thread.sleep(3000);
@@ -77,7 +77,7 @@ public class Risk_management extends PRA_Home{
         String text_s=wd.findElement(By.xpath("//p[text()='xyz']")).getText();
         logger21.log(Status.PASS, "In PRA summary tab-> In management option -"+ verify_summary_tab.getText()+" with text "+ text_s+" is visible");
         wd.switchTo().frame(1);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         String summary_txt=wd.findElement(By.xpath("//body[@data-id='RiskManagementNotes']//p")).getText();
         logger21.log(Status.PASS, "In PRA summary tab->"+summary_txt+" text is visible in risk management summary notes");
         wd.switchTo().defaultContent();

@@ -13,27 +13,29 @@ public class Generate_Report extends PRA_Home {
 	
 	@FindBy(linkText = "3. Pest risk analysis summary")
 	WebElement analysis_summary_tab;
-	
+
 	@FindBy(xpath = "//a[@class='nav-link introPRAReport']")
 	WebElement PRA_Report;
-	
+
 	@FindBy(xpath = "//*[@id=\"navbar-adv\"]/ul/li[1]/ul/li[1]/a")
 	WebElement view_report;
-	
-	@FindBy(xpath = "(//a[@class='action'])[2]")
+
+	@FindBy(xpath = "//*[@id=\"toolbar\"]/ul/li[3]/a/span")
 	WebElement download_word;
-	
-	
-	@FindBy(xpath = "//a[@class='nav-link introPRAReport']") 
+
+
+	@FindBy(xpath = "//*[@id=\"navbar-adv\"]/ul/li[1]/a/span")
 	WebElement PRA_Full_Report;
-	  
-	@FindBy(xpath = "//*[@id=\"navbar-adv\"]/ul/li[1]/ul/li[3]/a") 
+
+	@FindBy(xpath = "//*[@id=\"navbar-adv\"]/ul/li[1]/ul/li[3]/a")
 	WebElement view_full_report;
-	  
-	@FindBy(xpath = "(//a[@class='action'])[2]") 
+
+	@FindBy(xpath = "//*[@id=\"toolbar\"]/ul/li[3]/a/span")
 	WebElement download_wordfile;
-	
-	
+
+
+
+
 	//Delete PRA
 	
 	

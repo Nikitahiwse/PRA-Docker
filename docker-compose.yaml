@@ -36,13 +36,13 @@ services:
       - ./output/result/PRA_Report:/usr/share/data/PRA_Report
       - ./output/result/Screenshots:/usr/share/data/Screenshots
 
-  mycabi:
-    image: cabi/selenium-docker
-    depends_on:
-      - chrome2
-    environment:
-      - HUB_HOST=hub
-      - MODULE=mycabi.xml
-    volumes:
-      - ./output/result/PRA_Report:/usr/share/data/PRA_Report
-      - ./output/result/Screenshots:/usr/share/data/Screenshots
+ # mycabi:
+ #   image: cabi/selenium-docker
+ #   depends_on:
+ #    - chrome2
+ #   environment:
+ #     - HUB_HOST=hub
+ #    - MODULE=mycabi.xml
+ #  volumes:
+ #    - ./output/result/PRA_Report:/usr/share/data/PRA_Report
+ #    - ./output/result/Screenshots:/usr/share/data/Screenshots

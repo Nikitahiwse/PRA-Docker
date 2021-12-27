@@ -1,20 +1,18 @@
 package pra_child_classes;
 
-import java.util.Set;
-
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
-import com.aventstack.extentreports.Status;
-
 import pra_package.PRA_Home;
+
+import java.util.Set;
 
 public class Bypest_download_pra_report extends PRA_Home {
 	JavascriptExecutor jse=(JavascriptExecutor)wd;
 	@FindBy(linkText = "4. PRA summary")WebElement PRA_summary_tab;
-	@FindBy(xpath="//span[@class='glyphicon glyphicon-download-alt']")WebElement PRA_Report;
-	@FindBy(xpath="//li[@class='nav-item menublock open']//ul[@class='dropdown-menu']//a")WebElement view_html_report;
+	@FindBy(xpath="//*[@id=\"navbar-adv\"]/ul/li[1]/a/span/span[2]")WebElement PRA_Report;
+	@FindBy(xpath="//*[@id=\"navbar-adv\"]/ul/li[1]/ul/li/a")WebElement view_html_report;
 	@FindBy(xpath="//span[@class='cabi-icon-icon_download']")WebElement download_btn;
 	@FindBy(linkText = "Home")WebElement home_tab;
 	public void HTML_report() throws InterruptedException

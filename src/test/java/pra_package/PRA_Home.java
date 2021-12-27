@@ -79,7 +79,7 @@ public class PRA_Home extends PRA_Base{
 		System.out.println("title exist or not: " + exist);
 	}
 
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	void Banner_footer() throws InterruptedException
 	{
 		Banner_footer_PRA bf=PageFactory.initElements(wd, Banner_footer_PRA.class);
@@ -101,7 +101,7 @@ public class PRA_Home extends PRA_Base{
 	{
 		Previous_PRA previous=PageFactory.initElements(wd, Previous_PRA.class);
 		previous.previousPRA();
-		previous.View_Bypathway_PRA();
+		//previous.View_Bypathway_PRA();
 		previous.View_Report_from_previous_PRA();
 		previous.filter();
 
@@ -118,7 +118,7 @@ public class PRA_Home extends PRA_Base{
 		regulated.regulated_filter();
 	}
 
-	@Test(priority = 9)
+	//@Test(priority = 9)
 	void pathway_creation() throws Throwable
 	{
 		ByPathway pathway = PageFactory.initElements(wd, ByPathway.class);
@@ -128,7 +128,7 @@ public class PRA_Home extends PRA_Base{
 		pathway.generate_full_list();
 	}
 
-	@Test(priority = 10)
+	//@Test(priority = 10)
 	void By_pathway_risk_assessments() throws Throwable
 	{
 		Pathway_RiskAssessments path = PageFactory.initElements(wd, Pathway_RiskAssessments.class);
@@ -136,7 +136,7 @@ public class PRA_Home extends PRA_Base{
 		path.full_risk_assessment();
 	}
 
-	@Test(priority = 11)
+	//@Test(priority = 11)
 	void By_pathway_risk_assessments_actions() throws Throwable
 	{
 		User_Action action= PageFactory.initElements(wd, User_Action.class);
@@ -144,7 +144,7 @@ public class PRA_Home extends PRA_Base{
 		action.export_import_pest();
 	}
 
-	@Test(priority = 12)
+	//@Test(priority = 12)
 	void By_pathway_pestrisk() throws Throwable
 	{
 		PestRisk_Management pest= PageFactory.initElements(wd, PestRisk_Management.class);
@@ -160,7 +160,7 @@ public class PRA_Home extends PRA_Base{
 		screen.summary_content();
 	}
 
-	@Test(priority = 14)
+	//@Test(priority = 14)
 	void By_pathway_report_generation() throws Throwable
 	{
 		Generate_Report report=PageFactory.initElements(wd, Generate_Report.class);
@@ -171,7 +171,7 @@ public class PRA_Home extends PRA_Base{
 
 	}
 
-	@Test(priority = 15)
+	//@Test(priority = 15)
 	void By_pest_initiation() throws InterruptedException, IOException
 	{
 		ByPest_initiation bypest=PageFactory.initElements(wd, ByPest_initiation.class);
@@ -179,14 +179,14 @@ public class PRA_Home extends PRA_Base{
 		bypest.re_edit_initiation_form(getobject("suggested_title_for_pra"));
 	}
 
-	@Test(priority = 16)
+	//@Test(priority = 16)
 	void By_pest_cattegorization_tab() throws InterruptedException, IOException
 	{
 		ByPest_categorization bypestcat=PageFactory.initElements(wd, ByPest_categorization.class);
 		bypestcat.categorization(getobject("suggested_title_for_pra"));
 	}
 
-	@Test(priority = 17)
+	//@Test(priority = 17)
 	void By_pest_Probabity_of_entry() throws InterruptedException, IOException
 	{
 		Bypest_Probability_of_entry probability=PageFactory.initElements(wd, Bypest_Probability_of_entry.class);
@@ -210,7 +210,7 @@ public class PRA_Home extends PRA_Base{
 
 	}
 
-	@Test(priority = 18)
+	//@Test(priority = 18)
 	void Bypest_riskassessment() throws InterruptedException
 	{
 		Risk_assessment risk=PageFactory.initElements(wd,Risk_assessment.class);
@@ -220,21 +220,21 @@ public class PRA_Home extends PRA_Base{
 		risk.Risk_assessment_summary();
 	}
 
-	@Test(priority = 19)
+	//@Test(priority = 19)
 	void Bypest_risk_management() throws InterruptedException
 	{
 		Risk_management risk=PageFactory.initElements(wd, Risk_management.class);
 		risk.risk_management_form();
 	}
 
-	@Test(priority = 20)
+	//@Test(priority = 20)
 	void Bypest_PRA_summary_screen() throws InterruptedException
 	{
 		Bypest_pra_summary  summary=PageFactory.initElements(wd, Bypest_pra_summary.class);
 		summary.pra_summary();
 	}
 
-	@Test(priority = 21)
+	//@Test(priority = 21)
 	void Bypest_download_PRA_report() throws InterruptedException
 	{
 		Bypest_download_pra_report report=PageFactory.initElements(wd, Bypest_download_pra_report.class);

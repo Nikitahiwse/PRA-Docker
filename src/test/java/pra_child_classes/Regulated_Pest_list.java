@@ -1,17 +1,15 @@
 package pra_child_classes;
 
-import java.util.List;
-
+import com.aventstack.extentreports.Status;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
-
-import com.aventstack.extentreports.Status;
-
 import pra_package.PRA_Home;
+
+import java.util.List;
 
 public class Regulated_Pest_list extends PRA_Home {
 	
@@ -39,14 +37,14 @@ public class Regulated_Pest_list extends PRA_Home {
 		Thread.sleep(2000);
 		add_new_pest.click();
 		logger8.log(Status.PASS, "Add new pest button got clicked");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		List<WebElement>dialog= wd.findElements(By.xpath("//div[@id='addeditpopupregulatory']//div[@class='modal-content']"));
 		int dialog_count=dialog.size();
 		if(dialog_count==1)
 		{
 			logger8.log(Status.PASS, "Regulated Pest dialog box is visible");
 		}
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 		cancel_button.click();
 		Thread.sleep(2000);
 		logger8.log(Status.PASS, "cancel button got clicked and regulated Pest dialog box is closed");
@@ -155,7 +153,7 @@ public class Regulated_Pest_list extends PRA_Home {
 	
 	public void cleanup_pest() throws InterruptedException
 	{
-		
+
 		logger8.log(Status.PASS, "-------------Delete Pest---------------");
 		user_action.click();
 		Thread.sleep(2000);
@@ -201,11 +199,11 @@ public class Regulated_Pest_list extends PRA_Home {
 		
 		Thread.sleep(2000);
 		
-		go_to_next_page.click();
-		Thread.sleep(4000);
+		/*go_to_next_page.click();
+		Thread.sleep(5000);
 		logger8.log(Status.PASS, "Next page is opened");
 	
-		
+		Thread.sleep(1000);
 		List<WebElement>pest_secondpage=wd.findElements(By.xpath("//div[@id='RegulatoryStatusDatagrid']//tbody//tr"));
 		int pest_count_secondpage=pest_secondpage.size();
 		if(pest_count_secondpage== 2)
@@ -216,7 +214,7 @@ public class Regulated_Pest_list extends PRA_Home {
 		
 		go_to_previous_page.click();
 		Thread.sleep(2000);
-		logger8.log(Status.PASS, "Previous page is opened");
+		logger8.log(Status.PASS, "Previous page is opened");*/
 		
 	}
 	
@@ -239,15 +237,15 @@ public class Regulated_Pest_list extends PRA_Home {
 		Filter.regulated_pest_filter(type,"Nematoda","Type");
 		Thread.sleep(1000);
 		
-		logger8.log(Status.PASS,"Country passed for Country/area Filter- United Kingdom");
-	    Filter.regulated_pest_filter(Regulating_country_filter,"United Kingdom","Regulating country/area");
-	    Thread.sleep(1000);
-		logger8.log(Status.PASS, " Status number  passed for Status Filter- 2 ");
-		Filter.regulated_pest_filter(Regulatory_status_filter, "2","Regulatory status"); 
-		Thread.sleep(1000); 
-		logger8.log(Status.PASS," Date passed for Date last modified Filter- 30/11/2020");
-	    Filter.regulated_pest_filter(Date_last_modified_filter,"2020/10/30","Date last modified"); 
-	    Thread.sleep(1000);
+		//logger8.log(Status.PASS,"Country passed for Country/area Filter- United Kingdom");
+	    //Filter.regulated_pest_filter(Regulating_country_filter,"United Kingdom","Regulating country/area");
+	   // Thread.sleep(1000);
+		//logger8.log(Status.PASS, " Status number  passed for Status Filter- 2 ");
+		//Filter.regulated_pest_filter(Regulatory_status_filter, "2","Regulatory status");
+		//Thread.sleep(1000);
+		//logger8.log(Status.PASS," Date passed for Date last modified Filter- 30/11/2020");
+	    //Filter.regulated_pest_filter(Date_last_modified_filter,"2020/10/30","Date last modified");
+	    //Thread.sleep(1000);
 		System.out.println("HomePage Test is passed");
 	}
 }

@@ -13,7 +13,7 @@ COPY    home.xml .
 COPY    mycabi.xml .
 COPY    src/ src/
 
-RUN     mvn clean package -DskipTests
+#RUN     mvn clean package -DskipTests
 
 FROM openjdk:8u212-jre-alpine3.9 AS final
 
